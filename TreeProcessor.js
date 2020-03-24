@@ -53,7 +53,8 @@ function generateMap(mainBranch, path = '') {
             const obj = {
                 [step.uuid.toString()]: {
                     path: itemPath,
-                    name: step.name
+                    name: step.name,
+                    parentUuid: step.parenUuid
                 }
             };
 

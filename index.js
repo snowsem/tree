@@ -17,6 +17,10 @@ mainBranch.steps[3].splitter = true;
 console.log(mainBranch);
 processTree(mainBranch, '', false);
 
-console.log(generateMap(mainBranch));
+let pathMap = generateMap(mainBranch);
+
+console.log(mainBranch.generateMap());
+
+console.log(eval('mainBranch.steps[3]'));
 
 
