@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "uuid": "^7.0.2"
   }
 }

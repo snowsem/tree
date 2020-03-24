@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 
 export default class StepBaseType {
 
@@ -6,7 +7,9 @@ export default class StepBaseType {
         this.steps = steps;
         this.bots = bots;
         this.splitter = splitter;
-        this.parent = null
+        this.parent = null;
+        this.uuid = uuidv4();
+        this.parenUuid = null;
     }
 
     addStep(step) {
@@ -25,6 +28,10 @@ export default class StepBaseType {
                 this.addStep(step);
             })
         }
+    }
+
+    setParentUuid(uuid) {
+        this.uuid = uuid;
     }
 
     setIsSplitter(value) {
