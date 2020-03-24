@@ -39,4 +39,39 @@ function processTree(mainBranch, del, split) {
     }
 }
 
-export {processTree};
+function generateMap(mainBranch, path = '') {
+
+    let map = [];
+
+    function recursion(mainBranch, path = '') {
+        for (let i = 0; i < mainBranch.steps.length; i++) {
+
+            let step = mainBranch.steps[i];
+
+            let itemPath = path+'/'+i;
+
+            const obj = {
+                [step.uuid.toString()]: {
+                    path: itemPath,
+                    name: step.name
+                }
+            };
+
+            map = [...map, obj];
+
+            if (step.splitter) {
+            }
+            if (step.steps.length>0) {
+                recursion(step, itemPath);
+            }
+
+        }
+    }
+
+    recursion(mainBranch, path = '');
+
+    return map;
+
+}
+
+export {processTree, generateMap};

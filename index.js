@@ -1,6 +1,6 @@
 import StepBaseType from "./StepBaseType";
 import StepType from "./StepType";
-import {processTree} from "./TreeProcessor"
+import {processTree, generateMap} from "./TreeProcessor"
 
 let mainBranch = new StepBaseType();
 
@@ -16,3 +16,7 @@ mainBranch.steps[3].splitter = true;
 
 console.log(mainBranch);
 processTree(mainBranch, '', false);
+
+console.log(generateMap(mainBranch));
+
+
