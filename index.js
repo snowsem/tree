@@ -11,6 +11,7 @@ mainBranch.addSteps([new StepType('Step2'), new StepType('Step3'), new StepType(
 mainBranch.steps[1].addStep(new StepType('Step2_1'));
 mainBranch.steps[1].addStep(new StepType('Step2_2'));
 mainBranch.steps[1].splitter = true;
+mainBranch.steps[3].splitter = true;
 
 
 processTree(mainBranch, '', false);
