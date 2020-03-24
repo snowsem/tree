@@ -1,8 +1,8 @@
-import StepBaseType from "./StepBaseType";
 import StepType from "./StepType";
 import {processTree, generateMap} from "./TreeProcessor"
+import RootStepType from "./RootStepType";
 
-let mainBranch = new StepBaseType();
+let mainBranch = new RootStepType();
 
 const st1 = new StepType('Step1');
 
