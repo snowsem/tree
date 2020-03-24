@@ -4,7 +4,6 @@ function processTree(mainBranch, del, split) {
 
     let l = "";
 
-
     for (let i = 0; i < mainBranch.steps.length; i++) {
         let str = "";
         let step = mainBranch.steps[i];

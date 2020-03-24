@@ -15,12 +15,16 @@ export default class StepBaseType {
     }
 
     addStep(step) {
+
+        step.setParentUuid(this.uuid);
+
         if (!this.steps) {
             this.steps = [];
             this.steps = [...this.steps, step];
         } else {
             this.steps = [...this.steps, step];
         }
+
     }
 
     addSteps(steps) {
@@ -33,7 +37,7 @@ export default class StepBaseType {
     }
 
     setParentUuid(uuid) {
-        this.uuid = uuid;
+        this.parenUuid = uuid;
     }
 
     setIsSplitter(value) {
