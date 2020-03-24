@@ -2,6 +2,8 @@ import StepBaseType from "./StepBaseType";
 
 export default class StepType extends StepBaseType {
 
+    static get STEP_TYPE() { return 'step'; }
+
     constructor(name, steps = [], bots = null, splitter = false) {
         super();
         this.name = name;

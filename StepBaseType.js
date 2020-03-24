@@ -2,8 +2,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default class StepBaseType {
 
+    static get STEP_TYPE() { return 'root'; }
+
     constructor(steps = [], bots = null, splitter = false) {
-        this.name = 'Root';
+        this.name = StepBaseType.STEP_TYPE;
         this.steps = steps;
         this.bots = bots;
         this.splitter = splitter;

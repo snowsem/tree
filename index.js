@@ -13,5 +13,5 @@ mainBranch.steps[1].addStep(new StepType('Step2_2'));
 mainBranch.steps[1].splitter = true;
 mainBranch.steps[3].splitter = true;
 
-
+//console.log(mainBranch);
 processTree(mainBranch, '', false);
