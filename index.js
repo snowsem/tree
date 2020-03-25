@@ -1,6 +1,6 @@
-import StepType from "./StepType";
-import {processTree, generateMap} from "./TreeProcessor"
-import RootStepType from "./RootStepType";
+import StepType from "./src/StepTypes/StepType";
+import {processTree, generateMap} from "./src/TreeProcessor"
+import RootStepType from "./src/StepTypes/RootStepType";
 
 let mainBranch = new RootStepType();
 
