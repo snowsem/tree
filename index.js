@@ -17,6 +17,13 @@ mainBranch.steps[3].addStep(new StepType('Step2_3'));
 mainBranch.steps[3].addStep(new StepType('Step2_3'));
 mainBranch.steps[3].steps[0].addStep(new StepType('Step4_3'));
 
+//можно даже так создавать отдельные большие ветки и потом мержить в корень
+let splitBranch = new StepType('Split step');
+splitBranch.splitter = true;
+splitBranch.addSteps([new StepType('Step2'), new StepType('Step3'), new StepType('Step4')]);
+mainBranch.addStep(splitBranch);
+
+
 
 console.log(mainBranch);
 processTree(mainBranch, '', false);
