@@ -13,13 +13,17 @@ mainBranch.steps[1].addStep(new StepType('Step2_2'));
 mainBranch.steps[1].addStep(new StepType('Step2_3'));
 mainBranch.steps[1].splitter = true;
 mainBranch.steps[3].splitter = true;
+mainBranch.steps[3].addStep(new StepType('Step2_3'));
+mainBranch.steps[3].addStep(new StepType('Step2_3'));
+mainBranch.steps[3].steps[0].addStep(new StepType('Step4_3'));
+
 
 console.log(mainBranch);
 processTree(mainBranch, '', false);
 
 let pathMap = generateMap(mainBranch);
 
-//console.log(mainBranch.generateMap());
+console.log(mainBranch.generateMap());
 
 //console.log(eval('mainBranch.steps[3]'));
 //mainBranch.addStepToStepByUuid(new StepType('Step808'),mainBranch.steps[0].uuid.toString());
