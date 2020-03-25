@@ -19,8 +19,8 @@ processTree(mainBranch, '', false);
 
 let pathMap = generateMap(mainBranch);
 
-console.log(mainBranch.generateMap());
+//console.log(mainBranch.generateMap());
 
-console.log(eval('mainBranch.steps[3]'));
-
+//console.log(eval('mainBranch.steps[3]'));
+//mainBranch.addStepToStepByUuid(new StepType('Step808'),mainBranch.steps[0].uuid.toString());
 

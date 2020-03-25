@@ -27,11 +27,10 @@ export default class RootStepType extends StepBaseType {
                 let itemPath = path+'/'+i;
 
                 const obj = {
-                    [step.uuid.toString()]: {
-                        path: itemPath,
-                        name: step.name,
-                        parentUuid: step.parenUuid
-                    }
+                    uuid: step.uuid.toString(),
+                    path: itemPath,
+                    name: step.name,
+                    parentUuid: step.parenUuid
                 };
 
                 map = [...map, obj];
@@ -53,7 +52,25 @@ export default class RootStepType extends StepBaseType {
     }
 
     addStepToStepByUuid(step, uuid) {
+        //лютый говоногод не знаю как вызывать последовательность
+        let pathEval = 'this';
+        let map = this.generateMap();
 
+        const filtered = map.filter((item)=>{
+            return item.uuid === uuid;
+        });
+
+        let path = filtered[0].path.split('/');
+
+        path = path.map((item)=>{
+            if (item.length > 0) {
+                pathEval= pathEval+''+'.steps['+item+']';
+                return true;
+            }
+        });
+
+        pathEval+='.addStep';
+        console.log(pathEval);
     }
 
 }
